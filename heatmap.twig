@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>查看热力图</title>
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="js/heatmap/heatmap.js"></script>
+    <script type="text/javascript" src="css/heatmap/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="css/heatmap/assets/css/docs.css"/>
+    <link rel="stylesheet" href="css/heatmap/assets/css/commons.css"/>
+    <link rel="stylesheet" href="css/heatmap/assets/css/prism.css"/>
+    <link rel="stylesheet" href="css/layer.css"/>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/organizeParam.js"></script>
+    <script type="text/javascript" src="js/organizeData.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#select').click(function () {
+                generateParam();
+                var heatmapInstance = h337.create({
+                    container: document.querySelector('.heatmap'),
+                    radius: 30
+                });
+                ajaxSend('index.php', selectParam, proxy);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="text" id="startTime" value="2014-11-10"/>
+<input type="text" id="endTime" value="2014-11-30"/>
+<input type="text" id="url" value="{{ url }}"/>
+<input type="button" id="select" value="查看热力图">
+<div class="demo-wrapper">
+    {#<div class="text-bg">#}
+        {#much interesting click zone here!#}
+    {#</div>#}
+    <div class="heatmap">
+        <iframe
+    </div>
+</div>
+</body>
+</html>
