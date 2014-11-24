@@ -90,3 +90,13 @@ function ajaxSend(url, sData, func) {
 function getBrowserSize(obj) {
     return {'browserWidth': obj.width(), 'browserHeight': obj.height()};
 }
+
+function pointerX(event) {
+    event = window.event || event;
+    return event.pageX || (event.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft));
+}
+
+function pointerY(event) {
+    event = window.event || event;
+    return event.pageY || (event.clientY + (document.documentElement.scrollTop || document.body.scrollTop));
+}

@@ -14,21 +14,18 @@ function proxy(data) {
 }
 
 function generateHeatMap(JSONData, bodyZise) {
-    var heatmapInstance = h337.create({
+    heatmapInstance = h337.create({
         // only container is required, the rest will be defaults
         container: document.querySelector('.heatmap'),
         radius: 30
     });
 
-    //JSONData = eval("([" + JSONData + "])");
     // 组织数据
     var points = [];
     var max = 0;
     var body = bodyZise;
     var width = body['browserWidth'];
     var height = body['browserHeight'];
-    //var width = 1333;
-    //var height = 900;
     var len = JSONData.length;
 
     while (len--) {

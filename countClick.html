@@ -6,10 +6,27 @@
     <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="js/utils.js"></script>
     <script type="text/javascript" src="js/traceMouse.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            parent.document.all("heatframe").style.height = document.body.scrollHeight+20+'px';
+            parent.document.all("heatframe").style.width = document.body.scrollWidth+12+'px';
+        });
+    </script>
 </head>
-<body onbeforeunload="checkLeave()">
-<div style="positon:relative;text-align: center;">
+<body >
+<div style="positon: relative; text-align: center;">
     <img id="Image1" src="image/pix.png" style="positon:absolute;"/>
+    <p>1</p>
+    <img id="Image2" src="image/pix.png" style="positon:absolute;"/>
+    <p>2</p>
+    <img id="Image3" src="image/pix.png" style="positon:absolute;"/>
+    <p>3</p>
+    <img id="Image4" src="image/pix.png" style="positon:absolute;"/>
+    <p>4</p>
+    <img id="Image5" src="image/pix.png" style="positon:absolute;"/>
+    <p>5</p>
+    <img id="Image6" src="image/pix.png" style="positon:absolute;"/>
+
 </div>
 <input type="button">
 </body>

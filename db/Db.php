@@ -49,7 +49,7 @@ function db($data, $action)
  */
 function insert($dbh, $data)
 {
-    $sql = "INSERT INTO test.tst_clicklocation(ScreenX, ScreenY, LocationX, LocationY, RelativeX, Relativey, URL, Date, Time)
+    $sql = "INSERT INTO test.tst_clicklocation(ScreenX, ScreenY, LocationX, LocationY, RelativeX, RelativeY, URL, Date, Time)
             VALUES (:ScreenX, :ScreenY, :LocationX, :LocationY, :RelativeX, :Relativey, :URL, :Date, :Time);";
     $stmt = $dbh->prepare($sql);
     $stmt->bindParam(":ScreenX", $data['screenX']);

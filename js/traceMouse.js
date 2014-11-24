@@ -45,7 +45,7 @@ $(document).ready(function () {
     $(document).click(function (obj) {
         var localtion = obj ? obj : window.event;
         var mydate = getDateTime();
-        var crd={'crdx': localtion.clientX, 'crdy':localtion.clientY};
+        var crd={'crdx': localtion.clientX, 'crdy':localtion.clientY+$(document).scrollTop()};
         var pct=crd2pct(crd, tmpBrowser);
         // 单次点击的浏览器窗口尺寸、鼠标位置和时间
         var signleClick = {
