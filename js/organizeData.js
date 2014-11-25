@@ -1,21 +1,18 @@
 /**
  * Created by Jux on 2014/11/19.
  */
-//$(document).ready(function () {
-//    $('#select').click(function () {
-//        generateParam();
-//        ajaxSend('index.php', selectParam, proxy);
-//    });
-//});
 
 function proxy(data) {
     var size=getBrowserSize($(document.body).find('.heatmap'));
+    $("#heatframe").html('');
+    $("#heatframe").attr("src", "countClick.html").css("height", parseInt(data[0]["Height"]));
+    $(".heatmap").css("height", 30 + parseInt(data[0]["Height"]));
+    size["browserHeight"] = parseInt(data[0]["Height"]);
     generateHeatMap(data, size);
 }
 
 function generateHeatMap(JSONData, bodyZise) {
     heatmapInstance = h337.create({
-        // only container is required, the rest will be defaults
         container: document.querySelector('.heatmap'),
         radius: 30
     });

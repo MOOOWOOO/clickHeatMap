@@ -74,7 +74,7 @@ function insert($dbh, $data)
 function select($dbh, $param)
 {
     // 组织SQL语句
-    $sql = "SELECT RelativeX, RelativeY, val FROM test.tst_clickblob WHERE URL=:URL ";
+    $sql = "SELECT Height, RelativeX, RelativeY, val FROM test.tst_clickblob WHERE URL=:URL ";
     if (!empty($param["startDateTime"])) {
         if (!empty($param["endDateTime"])) {
             if ($param["startDateTime"] < $param["endDateTime"]) {

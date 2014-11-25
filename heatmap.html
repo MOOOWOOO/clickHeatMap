@@ -15,23 +15,12 @@
     <script type="text/javascript">
         var heatmapInstance = null;
         $(document).ready(function () {
-            heatmapInstance = h337.create({
-                // only container is required, the rest will be defaults
-                container: document.querySelector('.heatmap'),
-                radius: 30
-            });
-            heatmapInstance.setData({max: 0, data: []});
 
             $('#select').click(function () {
-                heatmapInstance.setData({max: 0, data: []});
-                $("#heatframe").html('');
-                $("#heatframe").attr("src", "countClick.html").attr('style', '');
-//            $("#heatframe").attr("src", "http://www.w3school.com.cn/").attr('style','');
                 generateParam();
                 ajaxSend('index.php', selectParam, proxy);
             });
         });
-
     </script>
 </head>
 <body>
@@ -40,11 +29,8 @@
 <input type="text" id="url" value="http://localhost:63342/clickHeatMap/countClick.html"/>
 <input type="button" id="select" value="查看热力图">
 
-<div class="demo-wrapper">
-    <div class="heatmap">
-        <iframe id="heatframe" width="100%" height="100%"></iframe>
-    </div>
+<div class="heatmap" style="border: 0px; width: 100%; ">
+    <iframe id="heatframe" src="" frameborder="0" width="100%" scrolling="no"></iframe>
 </div>
 </body>
-
 </html>

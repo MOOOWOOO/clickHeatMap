@@ -5,7 +5,8 @@ html {
         font-weight: 100;
         line-height: 1.4em;
       }
-      html, body, p, div { margin:0; padding:0; }
+
+/*html, body, p, div { margin:0; padding:0; }*/
 .hot-doc {
   background:#f65656;
 }

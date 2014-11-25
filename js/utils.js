@@ -62,7 +62,7 @@ function crd2pct(crd, size) {
  * @returns percent
  */
 function trans2pct(num, total) {
-    return (Math.round(num / total * 10000) / 100);
+    return (Math.round(num / total * 10000) / 100.0);
 }
 
 /**
